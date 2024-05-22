@@ -4,15 +4,15 @@
 // console.log(firstname[firstname.length-1]);
 
 
-let weekDay = +prompt("Hafta Kunini kiriting: ");
+let weekDay =prompt("Kun kiriting:");
 
-if (weekDay == Monday) {
-    alert("Dushanba")
-    
-}else if (weekDay == Sunday) {
-    alert("Seshanba")
-}else if (weekDay == Wednesday) {
-    alert("Chorshanba");
-}else{
-    alert("Hafta Kunini kiriting:");
+if (weekDay == "Monday") {
+
+  alert("Dushanba");
+} else if (weekDay == "Sunday") {
+  alert("Seshanba");
+} else if (weekDay == "Wednesday") {
+  alert("Chorshanba");
+} else{
+    alert("Hafta Kunini kiriting: ");
 }
