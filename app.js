@@ -62,5 +62,13 @@ let outPut = calCulateSum(a,b) //argument
 
 console.log(outPut);
 
+// Expression Function
 
-Express
+import React from 'react'
+
+export const app = () => {
+  return (
+    <div>app</div>
+  )
+}
+
