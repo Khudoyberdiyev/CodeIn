@@ -80,22 +80,50 @@
 // }
 
 // export default app
-let user = {
-  username:"John",
-  age:"34",
-  country:"USA"
-}
-const saveBtn = document.querySelector("#Save");
-const removeBtn = document.querySelector("#Remove");
+// let user = {
+//   username:"John",
+//   age:"34",
+//   country:"USA"
+// }
+// const saveBtn = document.querySelector("#Save");
+// const removeBtn = document.querySelector("#Remove");
 
 
 
-saveBtn.addEventListener("click", () =>{
-      localStorage.setItem("Foydalanuvchi", JSON.stringify(user));
-})
+// saveBtn.addEventListener("click", () =>{
+//       localStorage.setItem("Foydalanuvchi", JSON.stringify(user));
+// })
 
-removeBtn.addEventListener("click", () => {
-let f =   JSON.parse(localStorage.getItem("Foydalanuvchi"))
-delete f.country;
-console.log(f);
-});
+// removeBtn.addEventListener("click", () => {
+// let f =   JSON.parse(localStorage.getItem("Foydalanuvchi"))
+// delete f.country;
+// console.log(f);
+// });
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     data.forEach(post => {
+//       const h3 = document.createElement("h3");
+//       h3.innerHTML = post.title;
+//       document.body.appendChild(h3);
+//     });
+//   });
+
+
+fetch("https://jsonplaceholder.typicode.com/photos")
+    .then(response => response.json())
+    .then(data => renderData(data))
+
+
+
+    function renderData(imageData) {
+      imageData.slice(0,10).forEach(image => {
+        const img = document.createElement("img");
+             img.src = image.url
+             console.log(image.title);
+             document.body.appendChild(img);
+      })
+    }
